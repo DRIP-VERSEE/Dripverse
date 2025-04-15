@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dripverse - Clothing Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    nav {
+      background: #222;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3366;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5em;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .product {
+      background: #222;
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff3366;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tshirts">T-Shirts</a>
+    <a href="#shirts">Shirts</a>
+    <a href="#jeans">Jeans</a>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to Dripverse</h1>
+  </section>
+
+  <section id="tshirts">
+    <h1>T-Shirts</h1>
+    <div class="grid">
+      <!-- T-Shirt Product Example -->
+      <div class="product">
+        <img src="https://example.com/tshirt1.jpg" alt="T-Shirt">
+        <h3>Graphic T-Shirt</h3>
+        <a href="https://affiliate-link.com/tshirt1" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shirts">
+    <h1>Shirts</h1>
+    <div class="grid">
+      <!-- Shirt Product Example -->
+      <div class="product">
+        <img src="https://example.com/shirt1.jpg" alt="Shirt">
+        <h3>Casual Shirt</h3>
+        <a href="https://affiliate-link.com/shirt1" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="jeans">
+    <h1>Jeans</h1>
+    <div class="grid">
+      <!-- Jeans Product Example -->
+      <div class="product">
+        <img src="de7e4d398b7b54bf0f72ceb95d6e1183.jpg" alt="Jeans">
+        <h3>Blue Slim Jeans</h3>
+        <a href="https://affiliate-link.com/jeans1" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Dripverse. All rights reserved.
+  </footer>
+
+</body>
+</html>
