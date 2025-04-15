@@ -2,131 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Clothing Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dripverse - Shop Your Style</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      transition: background 0.3s, color 0.3s;
+      background-color: #111;
+      color: #fff;
     }
+
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff3366;
+    }
+
     header {
-      background: #000;
-      color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
+      background: linear-gradient(120deg, #1a1a1a, #111);
     }
-    .logo {
-      max-width: 100px;
+
+    header h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #ff3366;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
     .product {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
+      background: #222;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease;
     }
+
     .product:hover {
-      transform: scale(1.02);
+      transform: scale(1.05);
     }
+
     .product img {
       width: 100%;
       height: auto;
+      border-radius: 8px;
     }
-    .product-content {
-      padding: 15px;
-      text-align: center;
+
+    .product h3 {
+      margin-top: 10px;
+      font-size: 1rem;
     }
-    .product-content h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-    .product-content a {
+
+    .product a {
       display: inline-block;
       margin-top: 10px;
-      padding: 10px 15px;
-      background: #000;
+      padding: 8px 15px;
+      background-color: #ff3366;
       color: white;
-      text-decoration: none;
       border-radius: 5px;
+      text-decoration: none;
     }
+
+    .product a:hover {
+      background-color: #e6005c;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
-      color: white;
-    }
-    .dark-mode {
-      background: #111;
-      color: #eee;
-    }
-    .dark-mode header, .dark-mode footer {
-      background: #000;
-      color: #fff;
-    }
-    .dark-mode .product {
-      background: #1e1e1e;
-      color: #eee;
-    }
-    .toggle-dark {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #444;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      background-color: #1a1a1a;
+      color: #aaa;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://via.placeholder.com/100x100?text=Logo" alt="Logo" class="logo">
-    <h1>My Favorite Clothing Picks</h1>
-    <p>Curated fashion with affiliate links — click & support 💖</p>
-    <button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tshirts">T-Shirts</a>
+    <a href="#shirts">Shirts</a>
+    <a href="#jeans">Jeans</a>
+  </nav>
+
+  <header id="home">
+    <h1>Dripverse</h1>
+    <p>Style that speaks for you. Browse and buy trendy outfits with a single click.</p>
   </header>
 
-  <section class="container">
-    <!-- Product Card -->
-    <div class="product">
-      <img src="https://via.placeholder.com/300x400" alt="Product 1">
-      <div class="product-content">
-        <h3>Stylish T-Shirt</h3>
-        <a href="https://your-affiliate-link.com" target="_blank">Buy Now</a>
+  <section id="tshirts">
+    <h2>T-Shirts</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71iW6swJ5PL._AC_UL1500_.jpg" alt="Graphic Tee">
+        <h3>Graphic Oversized Tee</h3>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61Z8p8O7YvL._AC_UL1500_.jpg" alt="Plain Tee">
+        <h3>Minimal Black Tee</h3>
+        <a href="#">Buy Now</a>
       </div>
     </div>
+  </section>
 
-    <div class="product">
-      <img src="https://via.placeholder.com/300x400" alt="Product 2">
-      <div class="product-content">
-        <h3>Comfy Hoodie</h3>
-        <a href="https://your-affiliate-link.com" target="_blank">Buy Now</a>
+  <section id="shirts">
+    <h2>Shirts</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61EmBJj9pZL._AC_UL1500_.jpg" alt="Check Shirt">
+        <h3>Casual Check Shirt</h3>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51Pb1AEVxgL._AC_UL1500_.jpg" alt="White Shirt">
+        <h3>Formal White Shirt</h3>
+        <a href="#">Buy Now</a>
       </div>
     </div>
-    <!-- Add more product cards as needed -->
+  </section>
+
+  <section id="jeans">
+    <h2>Jeans</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71VZsmwI4fL._AC_UL1500_.jpg" alt="Slim Jeans">
+        <h3>Blue Slim Fit</h3>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71L4oWXLM+L._AC_UL1500_.jpg" alt="Ripped Jeans">
+        <h3>Black Ripped Jeans</h3>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Brand Name — All rights reserved.</p>
-    <p><a href="mailto:contact@yourbrand.com" style="color:#ccc;">Contact Us</a></p>
+    &copy; 2025 Dripverse | All rights reserved.
   </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 
 </body>
 </html>
